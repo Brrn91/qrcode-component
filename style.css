@@ -35,23 +35,30 @@ img {
   border-radius: 40px;
 }
 
-h1, p {
+h1,
+p {
   text-align: center;
 }
 
 h1 {
   color: var(--cor04);
   font-size: 20px;
+  font-weight: 700;
   margin: 0px 10px;
-  padding: 0px 50px 15px 50px;
+  padding: 0px 30px 10px 30px;
 }
 
 p {
   font-size: 15px;
+  font-weight: 100;
   text-align: center;
   color: var(--cor03);
   margin: 10px 30px;
-  padding: 0px 30px 30px 30px;
+  padding: 0px 20px 30px 20px;
+}
+
+div {
+  margin-top: 20px;
 }
 
 .attribution {
@@ -61,4 +68,10 @@ p {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--cor04);
+  text-decoration: underline;
 }
