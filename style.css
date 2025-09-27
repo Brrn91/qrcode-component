@@ -12,27 +12,34 @@
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
+  /* Adicionado para melhor controle de tamanhos */
 }
 
 body {
   font-family: var(--font);
   background-color: var(--cor02);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 main {
-  margin: auto;
-  margin-top: 2%;
   width: 450px;
   background-color: var(--cor01);
   border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 img {
   display: block;
-  margin: auto;
+  margin: 0 auto 20px;
   padding: 25px 25px 25px 25px;
-  width: 400px;
-  border-radius: 40px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
 }
 
 h1,
@@ -44,17 +51,16 @@ h1 {
   color: var(--cor04);
   font-size: 20px;
   font-weight: 700;
-  margin: 0px 10px;
-  padding: 0px 30px 10px 30px;
+  margin-bottom: 15px;
+  padding: 0px 10px;
 }
 
 p {
   font-size: 15px;
   font-weight: 100;
-  text-align: center;
   color: var(--cor03);
-  margin: 10px 30px;
-  padding: 0px 20px 30px 20px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
 }
 
 div {
@@ -64,6 +70,7 @@ div {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .attribution a {
@@ -76,40 +83,37 @@ div {
   text-decoration: underline;
 }
 
-@media (max-width: 450px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+body {
+  flex-direction: column;
+  /* Garante empilhamento vertical */
+  padding: 10px;
+  /* Padding mínimo para mobile */
+}
 
-  main {
-    margin: 0;
-    width: 100%;
-    max-width: 320px;
-    padding: 15px;
-  }
+main {
+  width: 100%;
+  max-width: 320px;
+  /* Limita largura máxima em mobile */
+  padding: 15px;
+}
 
-  img {
-    width: 100%;
-    padding: 0 0 15px 0;
-  }
+img {
+  margin-bottom: 15px;
+}
 
-  h1 {
-    font-size: 20px;
-    padding: 10px 10px 10px 10px;
-  }
+h1 {
+  font-size: 18px;
+  /* Levemente menor para mobile */
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
 
-  p {
-    font-size: 15px;
-    padding: 0 10px 10px 10px;
-  }
+p {
+  font-size: 14px;
+  padding: 0 5px;
+  margin-bottom: 15px;
+}
 
-  .attribution {
-    display: none;
-  }
+.attribution {
+  display: none;
 }
